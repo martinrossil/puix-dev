@@ -4,7 +4,7 @@ module.exports = {
         "ecmaVersion": 6,
         "sourceType": "module",
     },
-    ignorePatterns: ["public/"],
+    ignorePatterns: ["public/", "development/", "es5/", "esnext/"],
     env: {
         "browser": true, // makes HTMLElement and customElements NOT no-undef
     },
