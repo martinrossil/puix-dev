@@ -1,7 +1,7 @@
 name: Publish Firebase
 on:
-  push:
-    branches: [ master ]
+  release:
+    types: [ published ]
 
 jobs:
   firebase-deploy:
