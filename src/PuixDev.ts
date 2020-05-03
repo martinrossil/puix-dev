@@ -1,5 +1,5 @@
-import { DisplayElement, IDisplayElement, DisplayContainer } from 'puix';
-export default class PuixDev extends DisplayContainer {
+import { DisplayElement, IDisplayElement, LayoutContainer } from 'puix';
+export default class PuixDev extends LayoutContainer {
     constructor() {
         super();
         console.log('PuixDev', 'super()');
