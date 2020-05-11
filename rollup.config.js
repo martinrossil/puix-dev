@@ -24,7 +24,7 @@ export default {
         }),
         typescript({ tsconfig: "tsconfig.esnext.json" }),
         resolve({ dedupe: ['puix'] }),
-        // strip(),
+        strip(),
     ],
     output: [
         {
