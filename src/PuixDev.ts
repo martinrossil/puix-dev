@@ -1,4 +1,4 @@
-import { ApplicationElement, ITextElement, TextElement, WhiteSpace, AnchorLayout, Theme, Color, IDisplayContainer, DisplayContainer, ISvgElement, SvgElement, Icon, Overflow, IconElement, FontWeight } from 'puix';
+import { ApplicationElement, ITextElement, TextElement, AnchorLayout, Theme, Color, IDisplayContainer, DisplayContainer, ISvgElement, SvgElement, IconElement } from 'puix';
 import IIconElement from 'puix/dist/interfaces/IIconElement';
 export default class PuixDev extends ApplicationElement {
     constructor() {
@@ -16,7 +16,7 @@ export default class PuixDev extends ApplicationElement {
         const se: ISvgElement = new SvgElement();
         se.horizontalCenter = 0;
         se.verticalCenter = -100;
-        se.pathData = Icon.INSERT_CHART;
+        se.pathData = 'M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z';
         se.fillColor = Theme.PRIMARY_COLOR.index[4];
         se.strokeColor = Theme.PRIMARY_COLOR.index[7];
         se.strokeWidth = 1;
@@ -29,30 +29,30 @@ export default class PuixDev extends ApplicationElement {
         card.cornerRadius = 8;
         card.z = 1.2;
         card.layout.padding = 28;
-        card.overflow = Overflow.HIDDEN;
+        card.overflow = 'hidden';
         const iconBox: IDisplayContainer = new DisplayContainer();
         iconBox.backgroundColor = Theme.PRIMARY_COLOR.index[4];
         iconBox.layout.padding = 8;
         iconBox.cornerRadius = 8;
         const ie: IIconElement = new IconElement();
         ie.setSize(38, 38);
-        ie.icon = Icon.INSERT_CHART;
+        ie.icon = 'M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z';
         ie.color = Color.WHITE;
         iconBox.addElement(ie);
         card.addElement(iconBox);
         const totalSub: ITextElement = new TextElement();
         totalSub.text = 'Total Subscribers';
-        totalSub.whiteSpace = WhiteSpace.NO_WRAP;
+        totalSub.whiteSpace = 'nowrap';
         totalSub.x = 76;
         totalSub.y = 4;
-        totalSub.fontWeight = FontWeight.BOLD;
+        totalSub.fontWeight = 700;
         totalSub.color = Theme.NEUTRAL_COLOR.index[4];
         const valText: ITextElement = new TextElement();
         valText.text = '71,897';
-        valText.whiteSpace = WhiteSpace.NO_WRAP;
+        valText.whiteSpace = 'nowrap';
         valText.x = 76;
         valText.y = 26;
-        valText.fontWeight = FontWeight.BOLD;
+        valText.fontWeight = 700;
         valText.fontSize = 34;
         valText.color = Theme.NEUTRAL_COLOR.index[9];
         const chip: IDisplayContainer = new DisplayContainer();
@@ -66,7 +66,7 @@ export default class PuixDev extends ApplicationElement {
         chipText.text = 'Inactive';
         chipText.color = Theme.SUCCESS_COLOR.index[6];
         chipText.fontSize = 12;
-        chipText.fontWeight = FontWeight.SEMI_BOLD;
+        chipText.fontWeight = 700;
         chip.addElement(chipText);
         const botBar: IDisplayContainer = new DisplayContainer();
         botBar.setSize(400, 50);
