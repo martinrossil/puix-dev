@@ -3,17 +3,14 @@ import compiler from '@ampproject/rollup-plugin-closure-compiler';
 import typescript from 'rollup-plugin-typescript2';
 import resolve from '@rollup/plugin-node-resolve';
 import strip from '@rollup/plugin-strip';
-import clear from 'rollup-plugin-clear';
+// import clear from 'rollup-plugin-clear';
 import copy from 'rollup-plugin-copy';
 import {version} from './package.json';
 
 export default {
     input: './src/PuixDev.ts',
     plugins: [
-        clear({ targets: ['public'] }),
-        typescript({ tsconfig: "tsconfig.esnext.json" }),
-        resolve({ dedupe: ['puix'] }),
-        strip(),
+        // clear({ targets: ['public'] }),
         copy({
             targets: [
                 { 
@@ -24,7 +21,10 @@ export default {
                 { src: 'assets/public/*.js', dest: 'public' },
                 { src: 'assets/fonts/**.*', dest: 'public' }
             ]
-        })
+        }),
+        typescript({ tsconfig: "tsconfig.esnext.json" }),
+        resolve({ dedupe: ['puix'] }),
+        strip(),
     ],
     output: [
         {
