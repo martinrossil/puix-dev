@@ -2,7 +2,7 @@
 import compiler from '@ampproject/rollup-plugin-closure-compiler';
 import typescript from 'rollup-plugin-typescript2';
 import resolve from '@rollup/plugin-node-resolve';
-import strip from '@rollup/plugin-strip';
+// import strip from '@rollup/plugin-strip';
 // import clear from 'rollup-plugin-clear';
 import copy from 'rollup-plugin-copy';
 import {version} from './package.json';
@@ -24,7 +24,7 @@ export default {
         }),
         typescript({ tsconfig: "tsconfig.esnext.json" }),
         resolve({ dedupe: ['puix'] }),
-        strip(),
+        // strip(),
     ],
     output: [
         {
