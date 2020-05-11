@@ -3,8 +3,8 @@ import compiler from '@ampproject/rollup-plugin-closure-compiler';
 import typescript from 'rollup-plugin-typescript2';
 import resolve from '@rollup/plugin-node-resolve';
 import strip from '@rollup/plugin-strip';
-import clear from 'rollup-plugin-clear'
-import copy from 'rollup-plugin-copy'
+import clear from 'rollup-plugin-clear';
+import copy from 'rollup-plugin-copy';
 import {version} from './package.json';
 
 export default {
@@ -17,12 +17,12 @@ export default {
         copy({
             targets: [
                 { 
-                    src: 'assets/index.html',
+                    src: 'assets/public/index.html',
                     dest: 'public',
                     transform: (contents) => contents.toString().replace('{{version}}', version)
                 },
-                { src: 'assets/customElements.js', dest: 'public' },
-                { src: 'assets/polyfills.js', dest: 'public' }
+                { src: 'assets/public/*.js', dest: 'public' },
+                { src: 'assets/fonts/**.*', dest: 'public' }
             ]
         })
     ],

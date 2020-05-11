@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "roll-dev": "rollup -c rollup.development.js --watch",
-    "serve-dev": "live-server --open=./development",
-    "build": "rollup -c",
-    "serve-public": "live-server --open=./public"
+    "dev:watch": "rollup -c rollup.development.js --watch",
+    "dev:serve": "live-server --open=./development",
+    "public:serve": "live-server --open=./public",
+    "build": "rollup -c"
   },
   "repository": {
     "type": "git",
@@ -33,13 +33,13 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
     "live-server": "^1.2.1",
-    "rollup": "^2.7.6",
+    "rollup": "^2.9.1",
     "rollup-plugin-clear": "^2.0.7",
     "rollup-plugin-copy": "^3.3.0",
     "rollup-plugin-typescript2": "^0.27.0",
     "typescript": "^3.8.3"
   },
   "dependencies": {
-    "puix": "^0.1.22"
+    "puix": "^0.1.28"
   }
 }
