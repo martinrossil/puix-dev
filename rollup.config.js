@@ -2,23 +2,23 @@
 import compiler from '@ampproject/rollup-plugin-closure-compiler';
 import typescript from 'rollup-plugin-typescript2';
 import resolve from '@rollup/plugin-node-resolve';
-// import strip from '@rollup/plugin-strip';
-// import clear from 'rollup-plugin-clear';
+import strip from '@rollup/plugin-strip';
+import clear from 'rollup-plugin-clear';
 import copy from 'rollup-plugin-copy';
 import {version} from './package.json';
 
 export default {
     input: './src/PuixDev.ts',
     plugins: [
-        // clear({ targets: ['public'] }),
+        clear({ targets: ['public'] }),
         copy({
             targets: [
                 { 
-                    src: 'assets/public/index.html',
+                    src: 'assets/dist/index.html',
                     dest: 'public',
                     transform: (contents) => contents.toString().replace('{{version}}', version)
                 },
-                { src: 'assets/public/*.js', dest: 'public' },
+                { src: 'assets/dist/*.js', dest: 'public' },
                 { src: 'assets/fonts/**.*', dest: 'public' }
             ]
         }),
