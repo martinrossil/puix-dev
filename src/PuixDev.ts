@@ -1,4 +1,4 @@
-import { ApplicationElement, ITextElement, TextElement, AnchorLayout, Theme, Color, IDisplayContainer, DisplayContainer, ISvgElement, SvgElement, IconElement } from 'puix';
+import { ApplicationElement, AnchorLayout, Theme, Color, IDisplayContainer, DisplayContainer, ISvgElement, SvgElement, IconElement, ITextElement, TextElement } from 'puix';
 import IIconElement from 'puix/dist/interfaces/IIconElement';
 export default class PuixDev extends ApplicationElement {
     constructor() {

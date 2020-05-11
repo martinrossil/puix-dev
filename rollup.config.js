@@ -13,13 +13,13 @@ export default {
         clear({ targets: ['public'] }),
         copy({
             targets: [
+                { src: 'assets/dist/**.*', dest: 'public' },
+                { src: 'assets/fonts/**.*', dest: 'public' },
                 { 
                     src: 'assets/dist/index.html',
                     dest: 'public',
                     transform: (contents) => contents.toString().replace('{{version}}', version)
-                },
-                { src: 'assets/dist/*.js', dest: 'public' },
-                { src: 'assets/fonts/**.*', dest: 'public' }
+                } 
             ]
         }),
         typescript({ tsconfig: "tsconfig.esnext.json" }),
