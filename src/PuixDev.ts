@@ -16,7 +16,7 @@ export default class PuixDev extends ApplicationElement {
         const se: ISvgElement = new SvgElement();
         se.horizontalCenter = 0;
         se.verticalCenter = -100;
-        se.pathData = 'M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z';
+        se.pathData = 'M13 13v8h8v-8h-8zM3 21h8v-8H3v8zM3 3v8h8V3H3zm13.66-1.31L11 7.34 16.66 13l5.66-5.66-5.66-5.65z';
         se.fillColor = Theme.PRIMARY_COLOR.index[4];
         se.strokeColor = Theme.PRIMARY_COLOR.index[7];
         se.strokeWidth = 1;
@@ -36,7 +36,7 @@ export default class PuixDev extends ApplicationElement {
         iconBox.cornerRadius = 8;
         const ie: IIconElement = new IconElement();
         ie.setSize(38, 38);
-        ie.icon = 'M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z';
+        ie.icon = 'M13 13v8h8v-8h-8zM3 21h8v-8H3v8zM3 3v8h8V3H3zm13.66-1.31L11 7.34 16.66 13l5.66-5.66-5.66-5.65z';
         ie.color = Color.WHITE;
         iconBox.addElement(ie);
         card.addElement(iconBox);

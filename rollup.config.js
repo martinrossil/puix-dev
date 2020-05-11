@@ -15,6 +15,7 @@ export default {
             targets: [
                 { src: 'assets/dist/**.*', dest: 'public' },
                 { src: 'assets/fonts/**.*', dest: 'public' },
+                { src: 'assets/icons/**.*', dest: 'public' },
                 { 
                     src: 'assets/dist/index.html',
                     dest: 'public',
