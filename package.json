@@ -40,6 +40,6 @@
     "typescript": "^3.9.5"
   },
   "dependencies": {
-    "puix": "^0.4.5"
+    "puix": "^0.4.6"
   }
 }
