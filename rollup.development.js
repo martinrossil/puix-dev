@@ -11,7 +11,7 @@ export default [
         plugins: [
             typescript({tsconfig: "tsconfig.development.json"}),
             resolve({dedupe: ['puix']}),
-            clear({ targets: ['development'] }),
+            // clear({ targets: ['development'] }),
             copy({
                 targets: [
                     { 
@@ -19,7 +19,7 @@ export default [
                         dest: 'development',
                         transform: (contents) => contents.toString().replace('{{version}}', version)
                     },
-                    { src: 'assets/fonts/**.*', dest: 'development' }
+                    // { src: 'assets/fonts/**.*', dest: 'development' }
                 ]
             })
         ],
