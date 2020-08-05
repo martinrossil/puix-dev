@@ -1,34 +1,23 @@
-import { ApplicationElement, IScrollContainer, ScrollContainer, ScrollPolicy, IDisplayElement, HSL, DisplayElement, HorizontalLayout, VerticalAlign } from 'puix';
+import { ApplicationElement, IButtonComponent, ButtonComponent, Icons } from 'puix';
 
 export default class PuixDev extends ApplicationElement {
     constructor() {
         super();
         this.name = 'PuixDev';
-        this.addElement(this.scrollContainer);
+        this.addElement(this.button);
     }
 
-    private _scrollContainer!: IScrollContainer;
+    protected _button!: IButtonComponent;
 
-    protected get scrollContainer(): IScrollContainer {
-        if (!this._scrollContainer) {
-            this._scrollContainer = new ScrollContainer();
-            this._scrollContainer.horizontalCenter = 0;
-            this._scrollContainer.verticalCenter = 0;
-            this._scrollContainer.height = 400;
-            this._scrollContainer.percentWidth = 75;
-            this._scrollContainer.backgroundColor = HSL.WHITE;
-            this._scrollContainer.shadow = this.theme.shadows.large;
-            this._scrollContainer.horizontalScrollPolicy = ScrollPolicy.ON;
-            for (let i = 0; i < 2; i++) {
-                const d: IDisplayElement = new DisplayElement();
-                d.width = 200;
-                d.backgroundColor = HSL.BLUE_GREY_200;
-                this.scrollContainer.addElement(d);
-            }
-            this._scrollContainer.layout = new HorizontalLayout(16, VerticalAlign.FILL);
-            this._scrollContainer.layout.padding = 16;
+    protected get button(): IButtonComponent {
+        if (!this._button) {
+            this._button = new ButtonComponent();
+            this._button.icon = Icons.EMAIL;
+            this._button.label = 'Click me';
+            this._button.horizontalCenter = 0;
+            this._button.verticalCenter = 0;
         }
-        return this._scrollContainer;
+        return this._button;
     }
 }
 customElements.define('puix-dev', PuixDev);
