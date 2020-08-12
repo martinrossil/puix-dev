@@ -1,6 +1,6 @@
 {
   "name": "puix-dev",
-  "version": "1.1.9",
+  "version": "1.1.10",
   "description": "Testing environment for puix.",
   "main": "index.js",
   "scripts": {
