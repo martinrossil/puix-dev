@@ -1,4 +1,4 @@
-import { ApplicationElement, IButtonComponent, ButtonComponent, Icons } from 'puix';
+import { ApplicationElement, ButtonComponentInterface, ButtonComponent, Icons } from 'puix';
 
 export default class PuixDev extends ApplicationElement {
     constructor() {
@@ -7,9 +7,9 @@ export default class PuixDev extends ApplicationElement {
         this.addElement(this.button);
     }
 
-    protected _button!: IButtonComponent;
+    protected _button!: ButtonComponentInterface;
 
-    protected get button(): IButtonComponent {
+    protected get button(): ButtonComponentInterface {
         if (!this._button) {
             this._button = new ButtonComponent();
             this._button.icon = Icons.EMAIL;
