@@ -8,7 +8,7 @@ module.exports = {
     env: {
         "browser": true, // makes HTMLElement and customElements NOT no-undef
     },
-    plugins: ['@typescript-eslint'],
+    plugins: ['@typescript-eslint', 'tree-shaking'],
     extends: [
         'plugin:@typescript-eslint/recommended',
         'standard'
@@ -37,6 +37,7 @@ module.exports = {
         "@typescript-eslint/ban-types": "off",
         "object-curly-newline": "off",
         "@typescript-eslint/no-empty-interface": "off",
-        "@typescript-eslint/ban-ts-ignore": "off"
+        "@typescript-eslint/ban-ts-ignore": "off",
+        // "tree-shaking/no-side-effects-in-initialization": 2
     }
 }
